@@ -1,0 +1,41 @@
+landingpage.html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script defer src="./index.js"></script>
+</head>
+<body style="background-image: url(https://thumbs.dreamstime.com/b/carretera-del-asfalto-con-textura-de-las-marcas-de-camino-25199138.jpg);">
+
+        <div class="container">
+                <form id="form" action="/">
+                    <h1><b>REGISTRO</b></h1>
+                    <div class="input-control">
+                        <label for="username" style="cursor: pointer;color: black; margin-left: auto"><b>Usuario</b></label>
+                        <input id="username" name="username" type="text">
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-control">
+                        <label for="email" style="cursor: pointer; color: black; margin-left: auto;"><b>Correo</b></label>
+                        <input id="email" name="email" type="text">
+                        <div class="error"></div>
+                    </div>  
+                    <div class="input-control"> 
+                        <label for="password" style="cursor: pointer;color: black"><b>Contraseña</b></label>
+                        <input id="password" name="password" type="password">
+                        <div class="error"></div>
+                    </div> 
+                    <div class="input-control">
+                        <label for="password2" style="cursor: pointer; color: black;"><b>Repite contraseña</b></label>
+                        <input id="password2" name="password2" type="password">
+                        <div class="error"></div>
+                    </div>    
+                    <button type="submit">Inscribirse</button>
+                </form>
+            </div>
+        </div>
+</body>
+</html>
