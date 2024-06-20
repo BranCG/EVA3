@@ -1,42 +1,55 @@
 
-.enviar:hover {
-    background-color: white;
+
+/*ESTILOS CONTAINER Y FORMULARIO*/
+.container {
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
 }
 
-#form {
-    width: 600px;
-    height: 600px;
+.container h2 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    font-size: 22px;
+}
+
+.container #form {
+    width: 30%;
     padding: 20px;
-    margin: auto;
+    margin: 5%;
     margin-top: 100px;
     background-color: whitesmoke;
     border: 10px solid rgb(151, 28, 28); 
     border-radius: 10px;
-    font-size: 12px;
 }
+
+.enviar:hover {
+    background-color: white;
+}
+
 
 #form h1 {
     color: #0f2027;
     text-align: center;
     margin-top: 30px;
     margin-bottom: 40px;
-    font-size: 30px;
+    font-size: 22px;
 }
 
 #form label {
-    display: flex;
     align-items: left;
     font-family: inherit;
     position: relative;
-    left: 150px;
+    left: 10px;
     font-size: 15px;
     margin-top: 10px;
 }
 
 #form input {
-    position: relative;
-    left: 150px;
-    width: 300px;
+    left: 40px;
+    width: 100%;
 }
 
 
@@ -60,7 +73,7 @@
 }
 
 
-
+/*ESTILOS CONTROL DE VALIDACION*/
 .input-control input {
     border: 2px solid black;
 	border-radius: 4px;
@@ -87,5 +100,64 @@
     font-size: 15px;
     height: 13px;
     position: relative;
-    left: 150px;
+    left: 10px;
+}
+
+
+
+
+/*ESTILOS LISTADO*/
+.container .div-listado {
+    width: 40%;
+    height: 50%;
+    padding: 20px;
+    margin-top: 100px;
+    background-color: whitesmoke;
+    border: 5px solid rgb(151, 28, 28); 
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.contenedor .div-listado h2 {
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 2em;
+    color: whitesmoke;
+}
+
+.contenedor .div-listado .div-empleados {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+    padding: 0 30px;
+}
+
+.contenedor .div-listado .div-empleados p {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #ddd;
+}
+
+hr {
+    width: 100%;
+    height: 1px;
+}
+
+.btn {
+    padding: 5px 10px;
+    border: none;
+    margin: 0 5px;
+    color: white;
+    border-radius: 50px;
+}
+
+.btn-editar {
+    background-color: green;
+}
+
+.btn-eliminar {
+    background-color: red;
 }
