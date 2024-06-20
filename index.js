@@ -1,7 +1,7 @@
 // Inicialización de variables
 let listaConcursante = [];
 
-//objeto
+//objeto 
 const objConcursante = {
     id: '',
     nombre: '',
@@ -29,12 +29,12 @@ const btnAgregarInput = document.querySelector('#btnAgregar');
 // Event listener para el formulario
 formulario.addEventListener('submit', validarFormulario);
 
-// Función para validar el email
+// 1 Función para validar el email
 function validarEmail(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
 }
-// Función para validar el formulario
+// 2 Función para validar el formulario
 function validarFormulario(e) {
     e.preventDefault();
 
@@ -50,7 +50,7 @@ function validarFormulario(e) {
         return;
     }
 
-    // Crea un array con los valores de los checkboxes de transporte seleccionados.
+    // 1 Crea un array con los valores de los checkboxes de transporte seleccionados.
     const transportesSeleccionados = [];
     //Recorre cada checkbox de transporte seleccionado y agrega su valor al array transportesSeleccionados.
     document.querySelectorAll('input[name="transporte"]:checked').forEach((checkbox) => { 
@@ -77,7 +77,7 @@ function validarFormulario(e) {
     }
 }
 
-// Función para agregar un concursante a la lista
+// 3 Función para agregar un concursante a la lista
 function agregarConcursante() {
     listaConcursante.push({ ...objConcursante });
     mostrarConcursante();
@@ -85,7 +85,7 @@ function agregarConcursante() {
     limpiarObjeto();
 }
 
-// Función para limpiar el objeto objConcursante
+// 4 Función para limpiar el objeto objConcursante
 function limpiarObjeto() {
     objConcursante.id = '';
     objConcursante.nombre = '';
@@ -98,7 +98,7 @@ function limpiarObjeto() {
     objConcursante.transportePublico = '';
 }
 
-// Función para mostrar la lista de concursantes en el HTML
+// 5 Función para mostrar la lista de concursantes en el HTML
 function mostrarConcursante() {
     limpiarHTML(); // Limpia el contenido anterior del div de concursantes.
 
@@ -131,7 +131,7 @@ function mostrarConcursante() {
     });
 }
 
-//Carga los datos del concursante en el formulario para su edición.
+// 6 Carga los datos del concursante en el formulario para su edición.
 function cargarconcursante(concursante) {
     // Desestructura el objeto concursante para obtener los datos individuales.
     const {id, nombre, email, telefono, bip, tag, automovil, bicicleta, transportePublico} = concursante;
@@ -151,9 +151,8 @@ function cargarconcursante(concursante) {
     
     editando = true;
 }
-
+// 7 funcion Actualiza los datos del objeto objConcursante con los valores de los campos del formulario.
 function editarconcursante() {
-// Actualiza los datos del objeto objConcursante con los valores de los campos del formulario.
     objConcursante.nombre = nombreInput.value;
     objConcursante.email = emailInput.value;
     objConcursante.telefono = telefonoInput.value;
@@ -163,7 +162,7 @@ function editarconcursante() {
     objConcursante.bicicleta = bicicletaInput.value;
     objConcursante.transportePublico = transportePublicoInput.value;
 
-// Actualiza los datos del concursante en la lista de concursantes.
+// 8 Funcion Actualiza los datos del concursante en la lista de concursantes.
     listaConcursante.map(concursante => {   //.map itera sobre cada elemento de listaConcursante
         if(concursante.id === objConcursante.id) {
             concursante.id = objConcursante.id;
@@ -187,7 +186,7 @@ function editarconcursante() {
     
     editando = false;
 }
-
+// 9 Funcion elimina un concursante de la lista y actualiza la visualización.
 function eliminarconcursante(id) {
 
     listaConcursante = listaConcursante.filter(concursante => concursante.id !== id);
@@ -195,7 +194,7 @@ function eliminarconcursante(id) {
     limpiarHTML();
     mostrarConcursante();
 }
-
+//10 funcion limpia el contenido HTML de un elemento eliminando todos sus hijos.
 function limpiarHTML() {
     const divConcursantes = document.querySelector('.div-concursantes');
     while(divConcursantes.firstChild) {
@@ -203,7 +202,7 @@ function limpiarHTML() {
     }
 }
 
-//Se agregan politicas de provacidad como un componente de mejora para esta web :)
+//11 funcion Se agrega alerta de politicas de privacidad, esto como un componente de mejora para esta web :)
 function politicasPrivacidad() {
     alert('POLÍTICA DE PRIVACIDAD\n\
 \nEl presente Política de Privacidad establece los términos en que Benefiviajes usa y protege la información que es proporcionada por sus usuarios al momento de utilizar su sitio web. Esta compañía está comprometida con la seguridad de los datos de sus usuarios. Cuando le pedimos llenar los campos de información personal con la cual usted pueda ser identificado, lo hacemos asegurando que sólo se empleará de acuerdo con los términos de este documento. Sin embargo esta Política de Privacidad puede cambiar con el tiempo o ser actualizada por lo que le recomendamos y enfatizamos revisar continuamente esta página para asegurarse que está de acuerdo con dichos cambios.\n\
