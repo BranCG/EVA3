@@ -1,6 +1,7 @@
 // Inicialización de variables
 let listaConcursante = [];
 
+//objeto
 const objConcursante = {
     id: '',
     nombre: '',
@@ -49,9 +50,10 @@ function validarFormulario(e) {
         return;
     }
 
-    // Obtener opciones seleccionadas de checkboxes
+    // Crea un array con los valores de los checkboxes de transporte seleccionados.
     const transportesSeleccionados = [];
-    document.querySelectorAll('input[name="transporte"]:checked').forEach((checkbox) => {
+    //Recorre cada checkbox de transporte seleccionado y agrega su valor al array transportesSeleccionados.
+    document.querySelectorAll('input[name="transporte"]:checked').forEach((checkbox) => { 
         transportesSeleccionados.push(checkbox.value);
     });
 
@@ -60,17 +62,17 @@ function validarFormulario(e) {
         return;
     }
 
-    if (editando) {
+// Si estamos editando un concursante, llama a la función editarconcursante con los valores seleccionados.
+    if (editando) { 
         editarconcursante(opcionSeleccionada.value, transportesSeleccionados);
         editando = false;
-    } else {
+    } else { //De lo contrario, asigna un ID único al objeto objConcursante y guarda los datos del nuevo concursante en la lista.
         objConcursante.id = Date.now();
         objConcursante.nombre = nombreInput.value;
         objConcursante.email = emailInput.value;
         objConcursante.telefono = telefonoInput.value;
         objConcursante.opcion = opcionSeleccionada.value;
         objConcursante.transporte = transportesSeleccionados;
-
         agregarConcursante();
     }
 }
@@ -98,31 +100,32 @@ function limpiarObjeto() {
 
 // Función para mostrar la lista de concursantes en el HTML
 function mostrarConcursante() {
-    limpiarHTML();
+    limpiarHTML(); // Limpia el contenido anterior del div de concursantes.
 
-    const divConcursantes = document.querySelector('.div-concursantes');
+    const divConcursantes = document.querySelector('.div-concursantes'); // Obtiene el div de concursantes.
 
-    listaConcursante.forEach(concursante => {
+     // Itera sobre la lista de concursantes y crea un párrafo para cada uno.
+    listaConcursante.forEach(concursante => {   // Obtiene los datos del concursante.
         const { id, nombre, email, telefono, opcion, transporte } = concursante;
-
-        const parrafo = document.createElement('p');
+        // Crea un párrafo con los datos del concursante.
+        const parrafo = document.createElement('p'); 
         parrafo.textContent = `${id} - ${nombre} - ${email} - ${telefono} - ${opcion} - ${transporte.join(', ')}`;
         parrafo.dataset.id = id;
-
+        // Crea un botón de editar para cada concursante y asigna la función cargarconcursante.
         const editarBoton = document.createElement('button');
         editarBoton.onclick = () => cargarconcursante(concursante);
         editarBoton.textContent = 'Editar';
         editarBoton.classList.add('btn', 'btn-editar');
         parrafo.append(editarBoton);
-
+        // Crea un botón de eliminar para cada concursante y asigna la función eliminarconcursante.
         const eliminarBoton = document.createElement('button');
         eliminarBoton.onclick = () => eliminarconcursante(id);
         eliminarBoton.textContent = 'Eliminar';
         eliminarBoton.classList.add('btn', 'btn-eliminar');
         parrafo.append(eliminarBoton);
 
-        const hr = document.createElement('hr');
-
+        const hr = document.createElement('hr');   // Crea una línea horizontal para separar cada concursante.
+        // Agrega el párrafo y la línea horizontal al div de concursantes.
         divConcursantes.appendChild(parrafo);
         divConcursantes.appendChild(hr);
     });
@@ -143,14 +146,14 @@ function cargarconcursante(concursante) {
     transportePublicoInput.value = transportePublico;
 
     objConcursante.id = id;
-
+    //Actualiza el texto del botón de envío del formulario a "Actualizar"
     formulario.querySelector('button[type="submit"]').textContent = 'Actualizar';
     
     editando = true;
 }
 
 function editarconcursante() {
-
+// Actualiza los datos del objeto objConcursante con los valores de los campos del formulario.
     objConcursante.nombre = nombreInput.value;
     objConcursante.email = emailInput.value;
     objConcursante.telefono = telefonoInput.value;
@@ -160,8 +163,8 @@ function editarconcursante() {
     objConcursante.bicicleta = bicicletaInput.value;
     objConcursante.transportePublico = transportePublicoInput.value;
 
-    listaConcursante.map(concursante => {
-
+// Actualiza los datos del concursante en la lista de concursantes.
+    listaConcursante.map(concursante => {   //.map itera sobre cada elemento de listaConcursante
         if(concursante.id === objConcursante.id) {
             concursante.id = objConcursante.id;
             concursante.nombre = objConcursante.nombre;
@@ -179,7 +182,7 @@ function editarconcursante() {
     limpiarHTML();
     mostrarConcursante();
     formulario.reset();
-
+    // Cambia el texto del botón de enviar del formulario a "Agregar" después de editar un concursante.
     formulario.querySelector('button[type="submit"]').textContent = 'Agregar';
     
     editando = false;
@@ -200,7 +203,7 @@ function limpiarHTML() {
     }
 }
 
-
+//Se agregan politicas de provacidad como un componente de mejora para esta web :)
 function politicasPrivacidad() {
     alert('POLÍTICA DE PRIVACIDAD\n\
 \nEl presente Política de Privacidad establece los términos en que Benefiviajes usa y protege la información que es proporcionada por sus usuarios al momento de utilizar su sitio web. Esta compañía está comprometida con la seguridad de los datos de sus usuarios. Cuando le pedimos llenar los campos de información personal con la cual usted pueda ser identificado, lo hacemos asegurando que sólo se empleará de acuerdo con los términos de este documento. Sin embargo esta Política de Privacidad puede cambiar con el tiempo o ser actualizada por lo que le recomendamos y enfatizamos revisar continuamente esta página para asegurarse que está de acuerdo con dichos cambios.\n\
