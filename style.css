@@ -1,6 +1,6 @@
 /*ESTILOS CONTAINER Y FORMULARIO*/
 .contenedorIMG{
-    background-image: url(https://img.freepik.com/psd-gratis/multitud-personas-protestando-juntas-caminando-ciudad-ia-generativa_587448-2022.jpg?size=626&ext=jpg&ga=GA1.1.44546679.1716508800&semt=ais_user) ;
+    background-image: url(https://img.freepik.com/fotos-premium/multitud-anonima-personas-caminando-calles-ciudad_856565-5439.jpg) ;
     background-repeat: no-repeat;
     background-size: contain;
     width: 100%;
@@ -17,7 +17,7 @@ background-repeat: no-repeat;
 background-size: 250px; 
 margin: 0 auto; 
 border: 1px solid yellow; 
-margin-top: 100px; 
+margin-top: 5%; 
 }
 
 .container {
@@ -187,3 +187,4 @@ hr {
 .footer-social a:hover {
     text-decoration: underline;
 }
+
