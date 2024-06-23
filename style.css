@@ -1,7 +1,7 @@
 /*ESTILOS CONTAINER Y FORMULARIO*/
 .container {
     width: 100%;
-    height: calc(100vh - 100px);
+    height: 100%;
     display: flex;
     justify-content: center;
     margin: 1px;
@@ -17,7 +17,7 @@
 
 .container #form {
     width: 40%;
-    height: 140%;
+    height: 110%;
     padding: 20px;
     margin: 5%;
     background-color: whitesmoke;
