@@ -1,5 +1,6 @@
 // Inicialización de variables
 let listaConcursante = [];
+let editando = false;
 
 //objeto 
 const objConcursante = {
@@ -10,8 +11,6 @@ const objConcursante = {
     opcion: '',
     transporte: []  //Array para la seleccion en el checkbox
 }
-
-let editando = false;
 
 // Selección de elementos del DOM
 const formulario = document.querySelector('#form');
@@ -29,6 +28,8 @@ const btnAgregarInput = document.querySelector('#btnAgregar');
 // Event listener para el formulario
 formulario.addEventListener('submit', validarFormulario);
 
+
+//DESDE ACA TODAS LAS FUNCIONES HACIA ABAJO
 // 1 Función para validar el email
 function validarEmail(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -131,7 +132,7 @@ function mostrarConcursante() {
     });
 }
 
-// 6 Carga los datos del concursante en el formulario para su edición.
+// 6 funcion carga los datos del concursante en el formulario para su edición.
 function cargarconcursante(concursante) {
     // Desestructura el objeto concursante para obtener los datos individuales.
     const {id, nombre, email, telefono, bip, tag, automovil, bicicleta, transportePublico} = concursante;
