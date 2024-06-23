@@ -100,7 +100,7 @@
 }
 
 
-.contenedor .div-listado .div-concursantes {
+.container .div-listado .div-concursantes {
     width: 100%;
     height: auto; /* Ajusta la altura automáticamente */
     display: flex;
@@ -110,7 +110,7 @@
     padding: 0 30px;
 }
 
-.contenedor .div-listado .div-concursantes p {
+.container .div-listado .div-concursantes p {
     margin: 20px ;
     font-size: 1em;
     color: #ddd;
@@ -142,7 +142,7 @@ hr {
 .footer-container {
     display: flex;
     justify-content: center;
-    margin-top: 30%;
+    margin-top: 70%;
     background-color: rgb(187, 158, 27);
     color: rgb(0, 0, 0);
     padding: 30px;
