@@ -11,14 +11,14 @@ landingpage.html
     <script defer src="./index.js"></script>
 </head>
 <body style="background-image: url(https://thumbs.dreamstime.com/b/carretera-del-asfalto-con-textura-de-las-marcas-de-camino-25199138.jpg);">
-    <nav class="navbar fixed-top navbar-expand-sm bg-warning">
+    <nav class="navbar navbar-expand-sm bg-warning">
         <div class="container-fluid d-flex justify-content-center">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link btn btn-outline-light text-dark" href="#HOME"><b>HOME</b></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link btn btn-outline-light text-dark somos" href="#SOMOS"><b>QUIENES SOMOS</b></a>
+                    <a class="nav-link btn btn-outline-light text-dark" href="#SOMOS"><b>QUIENES SOMOS</b></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link btn btn-outline-light text-dark terminos" href="#CONTACTO"><b>CONTACTO</b></a>
@@ -27,20 +27,17 @@ landingpage.html
                     <a class="nav-link btn btn-outline-light text-dark terminos" href="#INGRESO"><b>INGRESO DE CONCURSANTES</b></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link btn btn-outline-light text-dark terminos" onclick="politicasPrivacidad()" ><b>POLITICAS DE PRIVACIDAD</b></a>
+                    <a class="nav-link btn btn-outline-light text-danger terminos" onclick="politicasPrivacidad()" ><b>POLITICAS DE PRIVACIDAD</b></a>
                 </li>
             </ul>
         </div>
     </nav>   
-        <div class="contenedorIMG"></div>
-        <div id="SOMOS" id="HOME"> 
-            <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
-            <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10 bg-primary p-5 text-white SOMOS">
+        <div id="HOME" class="contenedorIMG"></div>
+        <div class="justify-content-center">
+            <div id="SOMOS" class="col-md-8 bg-primary p-5 text-white SOMOS">
                 <span style="color: yellow; text-align: center;"><h3><b>BenefiViaje</b></h3></span>
                 <br>
-                <p><b>En BenefiViajes, nos preocupamos por brindar apoyo a quienes enfrentan las dificultades de los incrementos de precios en el transporte. Somos una empresa comprometida con la comunidad, y nuestra misión es ofrecer soluciones que alivien tu bolsillo y faciliten tu movilidad diaria.
-
-                Con nuestro concurso, queremos brindarte la oportunidad de <span style="color: yellow">viajar gratis durante todo un año</span> en transporte público, ya sea en metro o micro, o de disfrutar de un año de uso de autopistas si tienes automóvil. Creemos que el acceso a un transporte asequible es fundamental para mejorar la calidad de vida de las personas, y por eso estamos aquí para ayudarte.</b></p>
+                <p><b><br><br>BenefiViajes es una empresa pionera en ofrecer soluciones innovadoras para abordar los desafíos económicos que enfrentan las personas con los crecientes costos del transporte. <br><br>Nos enorgullece ser un referente en la comunidad al proporcionar un servicio que no solo alivia la carga financiera, sino que también promueve la movilidad sostenible y accesible para todos. Con un enfoque centrado en el cliente, nuestro concurso ofrece la oportunidad única de disfrutar de un año completo de viajes gratuitos en transporte público o de utilizar autopistas de forma gratuita durante un año para aquellos que prefieren viajar en automóvil. <br><br>En BenefiViajes, estamos comprometidos con mejorar la calidad de vida de las personas al hacer que el transporte sea más asequible, conveniente y sostenible.</b></p>
             </div>
             <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
         </div>      
@@ -93,22 +90,23 @@ landingpage.html
                 </div>
             </div>
         </div>
-        <footer id="CONTACTO">
-            <div class="footer-container">
+        <footer id="CONTACTO" class="bg-warning footer-container">
                 <div class="footer-contact">
+                <div class="row">
+                <div class="col-md-6">
                     <h2>Contacto</h2>
-                    <p>Dirección: Los olivos 982 Las condes, Santiago de Chile.</p>
-                    <p>Teléfono: +56 9 11224455</p>
-                    <p>Email: contacto@BenefiViajes.com</p>
+                    <p><b>Dirección: Los olivos 982 Las condes, Santiago de Chile.</b></p>
+                    <p><b>Teléfono: +56 9 11224455</b></p>
+                    <p><b>Email: contacto@BenefiViajes.com</b></p>
                 </div>
-                <div class="footer-social">
+                <div class="col-md-6">
                     <h2>Síguenos</h2>
                     <ul>
                         <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
                         <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
                         <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
                         <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
-                    </ul>    
+                    </ul>
                 </div>
             </div>
         </footer>
