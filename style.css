@@ -1,10 +1,32 @@
 /*ESTILOS CONTAINER Y FORMULARIO*/
+.contenedorIMG{
+    background-image: url(https://img.freepik.com/psd-gratis/multitud-personas-protestando-juntas-caminando-ciudad-ia-generativa_587448-2022.jpg?size=626&ext=jpg&ga=GA1.1.44546679.1716508800&semt=ais_user) ;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    margin-top: 10%;
+}
+
+.SOMOS{
+font-family: monospace; 
+text-align: center; 
+border-radius: 20px; 
+background-image:url(https://github.com/BranCG/EVA2/blob/main/img/huella22.png?raw=true);
+background-repeat: no-repeat; 
+background-size: 250px; 
+margin: 0 auto; 
+border: 1px solid yellow; 
+margin-top: 100px; 
+}
+
 .container {
     width: 100%;
     height: calc(100vh - 100px);
     display: flex;
     justify-content: center;
     margin: 1px;
+    margin-top: 20%;
 }
 
 .container h2 {
@@ -19,7 +41,6 @@
     height: 120%;
     padding: 20px;
     margin: 5%;
-    margin-top: 100px;
     background-color: whitesmoke;
     border: 10px solid rgb(151, 28, 28); 
     border-radius: 10px;
